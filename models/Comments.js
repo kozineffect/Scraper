@@ -3,7 +3,6 @@ var mongoose = require("mongoose");
 // Create a schema class
 var Schema = mongoose.Schema;
 
-// Create the Note schema
 var CommentSchema = new Schema({
   // Just a string
   title: {
@@ -15,7 +14,6 @@ var CommentSchema = new Schema({
   }
 });
 
-// Create the Note model with the NoteSchema
 var Comment = mongoose.model("Comment", CommentSchema);
 
 module.exports = Comment;

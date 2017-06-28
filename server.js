@@ -74,7 +74,7 @@ db.once("open", function () {
 
     // Routes
     // ======
-    app.get("/", function (req, res) {
+    app.get("https://onion-scraper.herokuapp.com/", function (req, res) {
         Article.find({}).populate("comment")
             .exec(function (error, doc) {
                 // Log any errors
@@ -93,7 +93,7 @@ db.once("open", function () {
 });
 
 // Create a new note or replace an existing note
-app.post("/articles/:id", function (req, res) {
+app.post("https://onion-scraper.herokuapp.com/articles/:id", function (req, res) {
     // Create a new note and pass the req.body to the entry
 
     var newComment = new Comment(req.body);
