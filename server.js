@@ -35,7 +35,7 @@ app.set("view engine", "handlebars");
 // app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://<kozineffect>:<ditka1985>@ds123050.mlab.com:23050/onion-scraper");
+mongoose.connect("mongodb://kozineffect:ditka1985@ds123050.mlab.com:23050/onion-scraper");
 var db = mongoose.connection;
 
 // Show any mongoose errors
