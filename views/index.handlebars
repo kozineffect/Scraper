@@ -1,0 +1,44 @@
+<style>
+    body {background-image: url("https://assets2.onionstatic.com/onion/static/images/onion_fb_placeholder.png");}
+    .jumbotron {
+                background-color: #F2F6D0;
+                font-weight: bold;
+                }
+</style>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1 class="text-center">Current Onion Articles</h1>
+    </div>
+</div>
+<br>
+
+<div class="container-fluid">
+    <div class="jumbotron">
+
+        <h2 class="text-center">Articles</h2>
+        <br>
+        <ul>
+            {{#each articles}}
+            <li>
+                {{this.title}}
+                <br>
+                <a href="{{this.link}}">{{this.link}}</a>
+                <br>
+                <p>Title: {{this.comment.title}}</p>
+                <p>Comment: {{this.comment.body}}</p>
+                <form class="create-update-form" action="/articles/{{this._id}}" method="POST">
+
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title">
+                        <br>
+                        <label for="body">Comment:</label>
+                        <input type="text" id="comment_body" name="body">
+                        <button id="comment" type="submit">Comment</button>
+                    </div>
+                </form>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
